@@ -21,6 +21,7 @@ class ApplicationController < Sinatra::Base
       redirect to "/recipes/#{@recipe.id}"
     else
       redirect to "/recipes/new"
+    end
   end
 
   #displays one recipe based on ID in the url
