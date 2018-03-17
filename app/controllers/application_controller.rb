@@ -17,8 +17,10 @@ class ApplicationController < Sinatra::Base
 
   #creates one recipe
   post '/recipes' do
-    @recipe = Post.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
-    redirect to "/recipes/#{@recipe.id}"
+    if @recipe = Post.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
+      redirect to "/recipes/#{@recipe.id}"
+    else
+      redirect to "/recipes"
   end
 
   #displays one recipe based on ID in the url
