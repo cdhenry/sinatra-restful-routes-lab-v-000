@@ -46,16 +46,6 @@ class ApplicationController < Sinatra::Base
     redirect to "/recipes/#{@recipe.id}"
   end
 
-  #displays update form recipe based on ID in the url
-  get '/recipes/:id/update'	do
-    redirect to '/recipes/show/:id'
-  end
-
-  #replaces an existing recipe based on ID in the url
-  put	'/recipes/:id'	do
-
-  end
-
   #deletes one recipe based on ID in the url
   delete '/recipes/:id/delete' do
     @recipe = Recipe.find_by_id(params[:id])
