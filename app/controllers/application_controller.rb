@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
 
   #displays update form recipe based on ID in the url
   get '/recipes/:id/update'	do
-
+    redirect to '/recipes/show'
   end
 
   #replaces an existing recipe based on ID in the url
