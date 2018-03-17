@@ -53,7 +53,7 @@ class ApplicationController < Sinatra::Base
 
   #replaces an existing recipe based on ID in the url
   put	'/recipes/:id'	do
-    
+
   end
 
   #deletes one recipe based on ID in the url
